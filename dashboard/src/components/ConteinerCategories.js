@@ -1,46 +1,59 @@
-import React, { Component } from 'react';
+import React  from 'react';
 import Category from './Category';
 
-class ConteinerCategories extends Component {
-    constructor() {
-        super()
-        this.state = {
-            categoriesList: []
-        }
+function ConteinerCategories () {
+    let remeras = {
+        name: "Remeras",
+        amount: 8
+    }
+    let musculosas = {
+        name: "Musculosas",
+        amount: 4
+    }
+    let pantalones = {
+        name: "Pantalones Largos",
+        amount: 6
+    }
+    let shorts = {
+        name: "Shorts",
+        amount: 6
+    }
+    let calzas = {
+        name: "Calzas Termicas",
+        amount: 4
+    }
+    let camperas = {
+        name: "Camperas",
+        amount: 8
+    }
+    let buzos = {
+        name: "Buzos",
+        amount: 4
+    }
+    let conjuntos = {
+        name: "Conjuntos",
+        amount: 4
     }
 
-    componentDidMount() {
-        fetch('api/products')
-            .then(respuesta => {
-                return respuesta.json()
-            })
-            .then(data => {
-                // console.log(genres)
-                this.setState({ categoriesList: data.meta.countByCategory })
-            })
-            .catch(error => console.log(error))
-    }
+    let allData = [remeras, musculosas, pantalones, shorts, calzas, camperas, buzos, conjuntos]
 
-    render () {
-        return (
-            <div className="conteiner-categories">
+    return (
+        <div className="conteiner-categories">
+            <div className="title-categories">
                 <div className="">
-                    <div className="">
-                        Total de Categorias
-                    </div>
-                    <div className="">
-                        {/* total de las categorias */}
-                    </div>
+                    Total de Categorias
                 </div>
                 <div className="">
-                    {this.state.categoriesList.map((category, index) => {
-                    { var key = Object.entries(category) }
-                        return <Category category={key[0][0]} count={key[0][1]} />
-                    })}
+                    8
                 </div>
             </div>
-        )
-    }
+            <div className="subconteiner-categories">
+                {allData.map((data, i) => {
+                    return <Category {...data} key={i} />
+                })}
+            </div>
+        </div>
+    )
 }
 
 export default ConteinerCategories;

@@ -3,10 +3,10 @@ import React from "react";
 function CreateProducts () {
     return (
         <div className="create-products">
-            {/* Agregar la referencia con la etiqueta <a> */}
-            <h4><a class="link" href="/administration/products/create">Crear producto</a></h4>
-            <div className="">
-                <div className="">Agrega un Producto</div>
+            <div className="conteiner-create">
+                <a className="link" href="http://localhost:3030/administration/products/create">
+                    <div className="">Agrega un Producto</div>
+                </a>
             </div>
         </div>
     );

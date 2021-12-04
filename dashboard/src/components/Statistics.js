@@ -7,7 +7,7 @@ function Statistics() {
     return (
         <div className="statistics">
             <ConteinerTopCard />
-            <div id="subconteiner-statistics">
+            <div className="subconteiner-statistics">
                 <ConteinerLastProduct />
                 <ConteinerCategories />
             </div>

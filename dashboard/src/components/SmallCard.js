@@ -4,10 +4,10 @@ function SmallCard(props) {
     return (
         <div className="small-card">
             <div className="name-card">
-                {props.name}
+                {props.title}
             </div>
             <div className="amount-card">
-                {props.description}
+                {props.amount}
             </div>
         </div>
     );
