@@ -20,18 +20,18 @@ function ConteinerLastProduct () {
 
     return (
         <div className="conteiner-last-product">
-            <div className="border-last-product">
-                <div className="title-last-product">
+            <div className="border-last-product border border-radius background-white">
+                <div className="title-last-product background border-radius">
                     <div className="">Último Producto cargado</div>
                 </div>
                 <div className="info-last-product">
                     <div className="half-conteiner-image">
-                        <img className="image" src={product.image}/>
+                        <img className="image" src={product.image} alt="Imagen del último producto"/>
                     </div>
                     <div className="half-conteiner-description">
-                        <div className="name-last-product">{product.name}</div>
-                        <div className="name-last-product">{product.description}</div>
-                        <a className="button-detail" href={product.detail}>Ver detalle</a>
+                        <div className="name-last-product title-top celeste bold">{product.name}</div>
+                        <div className="name-last-product azul-oscuro">{product.description}</div>
+                        <a className="button border border-radius background azul-oscuro" href={product.detail}>Ver detalle</a>
                     </div>
                 </div>
             </div>

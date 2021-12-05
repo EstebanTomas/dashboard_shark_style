@@ -35,14 +35,14 @@ function ConteinerTopCard() {
 
     let allData = [ 
         {
-            title: "Productos",
+            title: "Total de Productos",
             amount: products
         }, {
-            title: "Usuarios",
-            amount: users
-        }, {
-            title: "Productos en Carrito",
+            title: "Productos en el Carrito",
             amount: product_shop
+        }, {
+            title: "Total de Usuarios",
+            amount: users
         }
     ]
 

@@ -16,12 +16,12 @@ function ConteinerCategories () {
 
     return (
         <div className="conteiner-categories">
-            <div className="border-categories">
-                <div className="title-categories">
+            <div className="border-categories border border-radius background-white">
+                <div className="title-categories background border-radius">
                     <div className="">
                         Total de Categorias
                     </div>
-                    <div className="">
+                    <div className="bold">
                         {categories.length}
                     </div>
                 </div>

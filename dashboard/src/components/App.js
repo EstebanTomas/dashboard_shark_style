@@ -10,19 +10,15 @@ function App() {
     <React.Fragment>
       <Routes>
         <Route path="/" element={          
-          <div id="body">
-            <div id="main">
-              <TopSwitch />
-              <Statistics />
-            </div>
+          <div id="main">
+            <TopSwitch />
+            <Statistics />
           </div>
         }/>
         <Route path="/manage" element={
-          <div id="body">
-            <div id="main">
-              <TopSwitch />
-              <Manage />
-            </div>
+          <div id="main">
+            <TopSwitch />
+            <Manage />
           </div>
         }/>
       </Routes>
