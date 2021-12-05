@@ -75,6 +75,9 @@
 /* ConteinerLartProduct.js */
 .conteiner-last-product {
     width: 48%;
+}
+
+.border-last-product {
     border: solid 2px black;
 }
 
@@ -85,13 +88,6 @@
 
 .info-last-product {
     padding: 5px;
-}
-
-.name-last-product {
-    padding-bottom: 5px;
-}
-
-.subconteiner-info-last-product {
     width: 100%;
     display: flex;
 }
@@ -100,14 +96,28 @@
     width: 60%;
 }
 
+.image {
+    width: 100%;
+}
+
 .half-conteiner-description {
+
     width: 40%;
 }
+
+.name-last-product {
+    padding-bottom: 5px;
+}
+
 
 /* ConteinerCategories.js */
 .conteiner-categories {
     width: 48%;
+}
+
+.border-categories {
     border: solid 2px black;
+    padding-bottom: 10px;
 }
 
 .title-categories {
@@ -122,6 +132,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 15px;
+    padding-top: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

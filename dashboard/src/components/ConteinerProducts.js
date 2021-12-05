@@ -1,41 +1,18 @@
-import React from "react";
+import React, { useEffect, useState} from "react";
 import Product from "./Product";
 
 function ConteinerProducts () {
-    let allData = [
-        {
-            id: 1,
-            name: "Remera Rosa"
-        },
-        {
-            id: 2,
-            name: "Remera Naranja"
-        },
-        {
-            id: 3,
-            name: "Pantalones Nike"
-        },
-        {
-            id: 4,
-            name: "Campera Adidas"
-        },
-        {
-            id: 5,
-            name: "Short Ottom"
-        },
-        {
-            id: 6,
-            name: "Musculosa de Oferta"
-        },
-        {
-            id: 7,
-            name: "Calzas para entrenar"
-        },
-        {
-            id: 8,
-            name: "Buzo Negro Oscuro"
-        },
-    ]
+
+    const [products, setProducts] = useState ([]);
+
+    useEffect(() => {
+        fetch( '/api/products')
+        .then( response => response.json())
+        .then( data => {
+            setProducts(data.products);
+        })
+        .catch(error => console.error(error))
+    }, [])
 
     return (
         <div className="conteiner-products">
@@ -50,7 +27,7 @@ function ConteinerProducts () {
                 </nav>
             </article>
             <article>
-                {allData.map( (data, i) => {
+                {products.map( (data, i) => {
                     return <Product {...data} key={i}/>
                 })
                 }

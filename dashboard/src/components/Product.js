@@ -11,12 +11,12 @@ function Product (props) {
                     {props.name}
                 </li>
                 <li className="edit-product">
-                    <a href="http://localhost:3030/administration/products/edit/">
+                    <a href={`http://localhost:3030/administration/products/edit/${props.id}`}>
                         <i id="icon-edit-product" class="fas fa-edit"></i>
                     </a>
                 </li>
                 <li className="delete-product">
-                    <form action="http://localhost:3030/administration/products/delete/?_method=DELETE" method="POST">
+                    <form action={`http://localhost:3030/administration/products/delete/${props.id}?_method=DELETE`} method="POST">
                         <button id="button-delete" type="submit"><i class="fas fa-trash-alt"></i></button>
                     </form>
                 </li>
