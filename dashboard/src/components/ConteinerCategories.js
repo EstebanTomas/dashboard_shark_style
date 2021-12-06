@@ -16,9 +16,9 @@ function ConteinerCategories () {
 
     return (
         <div className="conteiner-categories">
-            <div className="border-categories border border-radius background-white">
-                <div className="title-categories background border-radius">
-                    <div className="">
+            <div className="border-categories   background-white">
+                <div className="title-categories background ">
+                    <div className="categories-title">
                         Total de Categorias
                     </div>
                     <div className="bold">
